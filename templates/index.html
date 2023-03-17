@@ -1,0 +1,36 @@
+<html>
+<head>
+    <title>Authentication</title>
+</head>
+<body>
+    <p> Register here </a></p>
+    <div>
+        <table>
+            <tbody>
+                <form action="{% url 'create' %}" method="POST">
+                    {% csrf_token %}
+                    <tr>
+                        <td>Username </td>
+                        <td><input type="text" name="username" required></td>
+                    </tr>
+                    <tr>
+                        <td>F_name</td>
+                        <td><input type="text" name="f_name" required></td>
+                    </tr>
+                    <tr>
+                        <td>L_name</td>
+                        <td><input type="text" name="l_name" required></td>
+                    </tr>
+                    <tr>
+                        <td>Password </td>
+                        <td><input type="char" name='password' required></td>
+                    </tr>
+                    <tr>
+                        <td><input type="submit" value="Submit"></td>
+                    </tr>
+                </form>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

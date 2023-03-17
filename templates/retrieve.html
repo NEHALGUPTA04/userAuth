@@ -1,0 +1,36 @@
+<html>
+    {% load socialaccount %}
+    {% load static %}
+<head>
+    <title>Authentication</title>
+</head>
+<body>
+    <p> Login  </a></p>
+    <div>
+        <table>
+            <tbody>
+                <form action="{% url 'retrieve' %}" method="POST">
+                    {% csrf_token %}
+                    <tr>
+                        <td>Username </td>
+                        <td><input type="text" name="username" required></td>
+                    </tr>
+                    <tr>
+                        <td>Password </td>
+                        <td><input type="char" name='password' required></td>
+                    </tr>
+                    <tr>
+                        <td><input type="submit" value="Submit"><br></td>
+                    </tr>
+                    
+                </form>
+            </tbody>
+        </table>
+    
+        <h3>Or</h3>
+        
+        <td><a href="{% provider_login_url 'google' %}">Login with Google</a></td>
+
+    </div>
+</body>
+</html>
